@@ -1,27 +1,27 @@
 
 import numpy as np
-from random import randint
+from random import uniform, uniform
 from Boid import Boid
 
 
 class Flock():
     def __init__(self, boid_count, boid_style) -> None:
         self.__center = np.array((
-            randint(-100, 100)/1, 
-            randint(-100, 100)/1, 
-            randint(-100, 100)/1
+            uniform(-100, 100), 
+            uniform(-100, 100), 
+            uniform(-100, 100)
         ))
         self.__boids = []
         for _ in range(boid_count):
             offset = np.array((
-                randint(-30, 30)/1, 
-                randint(-30, 30)/1, 
-                randint(-30, 30)/1
+                uniform(-30, 30), 
+                uniform(-30, 30), 
+                uniform(-30, 30)
             ))
             velocity = np.array((
-                randint(-5, 5)/1, 
-                randint(-5, 5)/1, 
-                randint(-5, 5)/1
+                uniform(-5, 5), 
+                uniform(-5, 5), 
+                uniform(-5, 5)
             ))
             new_boid = Boid((self.__center + offset), velocity)
             self.__boids.append(new_boid)
@@ -55,8 +55,7 @@ class Flock():
         
         vector_zero = -b1_pos
         
-        vector_other_flocks = -centers + self.__center
-        
+        vector_other_flocks = -(centers - self.__center)
         
         return vector_center, vector_away, vector_others, vector_zero, vector_other_flocks
     
