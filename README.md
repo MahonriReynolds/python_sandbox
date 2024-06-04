@@ -1,3 +1,3 @@
 # python_sandbox
 
-*Each directory is a python environment*
+Boids - simple boids simulation in matplotlib
