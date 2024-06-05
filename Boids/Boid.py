@@ -7,17 +7,20 @@ class Boid():
         self.__position = position
         self.__velocity = velocity
 
-    def move(self, vectors):
+    # take in the various velocities calculated in flock and
+    # apply them to the boid's velocity & position
+    def move(self, vectors) -> None:
         self.__velocity += vectors[0] / 300     # go to center of flock
         self.__velocity += vectors[1] * 600     # avoid others in flock
         self.__velocity += vectors[2] / 10      # match direction of flock
-        self.__velocity += vectors[3] / 250     # go to center of map
-        self.__velocity += vectors[4] / 300     # avoid other flocks
+        self.__velocity += vectors[3] / 225     # go to center of map
+        self.__velocity += vectors[4] / 250     # avoid other flocks
         
-        self.__velocity = (self.__velocity / np.linalg.norm(self.__velocity)) * 5
+        self.__velocity /= np.linalg.norm(self.__velocity) / 4  # uniform speed 
         
-        self.__position += self.__velocity
+        self.__position += self.__velocity  # update position
 
-    def locate(self):
+    # getter for boid's values
+    def locate(self) -> np.array:
         return self.__position, self.__velocity
     
