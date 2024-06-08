@@ -1,6 +1,6 @@
 # python_sandbox
 
-Boids: Simple boids simulation in matplotlib.
+Boids: Simplified boids simulation in matplotlib.
 ![Boids gif](https://github.com/MahonriReynolds/python_sandbox/blob/main/boids.gif)
 
 * Boid: Simple object hoding a position and velocity. Represented by a dot in the graph.
