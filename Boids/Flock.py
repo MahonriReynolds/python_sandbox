@@ -42,7 +42,7 @@ class Flock():
     def __get_vectors(self, b1, centers) -> np.array:
         b1_pos = b1.locate()[0]
         # get the Boid's (b1) perceived center of the flock
-        vector_center = self.__center - b1.locate()[0]
+        vector_center = self.__center - b1_pos
         
         # set the closest distance a Boid will get to any other Boid in the flock
         # as d=
