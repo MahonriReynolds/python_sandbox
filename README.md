@@ -9,7 +9,6 @@ Boids: Simple boids simulation in matplotlib.
 * main: A simple ~10 line script to init and run a Field.
 
 
-
 Misc: Collection of simple scripts for my personal use.
 
 * trace_table.py: Add to top of simple scripts to gen a variable value trace table.
