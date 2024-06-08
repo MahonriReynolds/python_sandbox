@@ -1,5 +1,5 @@
 
-# Add this snippet to the top of small scripts to genrate 
+# Add this snippet to the top of small scripts to generate 
 # a variable trace table in same foler as 'trace.txt'.
 # Assumes code to be traced is in a function and will be 
 # handling variables as locals.
