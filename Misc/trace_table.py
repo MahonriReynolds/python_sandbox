@@ -5,7 +5,8 @@
 # handling variables as locals.
 
 
-# Implimentation of sys.settrace().
+# This is an implimentation of sys.settrace()
+# so import sys.
 import sys
 
 # Set up trace function to handle formatting of trace table.
