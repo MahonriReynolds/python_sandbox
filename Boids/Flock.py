@@ -40,6 +40,7 @@ class Flock():
         
     
     def __get_vectors(self, b1, centers) -> np.array:
+        b1_pos = b1.locate()[0]
         # get the Boid's (b1) perceived center of the flock
         vector_center = self.__center - b1.locate()[0]
         
@@ -52,7 +53,6 @@ class Flock():
         
         # for each Boid in this Flock, get the Boid's perceived distance 
         # and direction differences and apply those to the two vectors above
-        b1_pos = b1.locate()[0]
         for b2 in self.__boids:
             if b1 != b2:
                 b2_pos, b2_v = b2.locate()
