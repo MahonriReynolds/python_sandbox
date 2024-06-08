@@ -5,6 +5,7 @@ Boids: Simple boids simulation in matplotlib.
 
 
 Misc: Collection of simple scripts for my personal use.
-    * trace_table.py: Add to top of simple scripts to gen a variable value trace table.
-    * 
+
+* trace_table.py: Add to top of simple scripts to gen a variable value trace table.
+* 
 
