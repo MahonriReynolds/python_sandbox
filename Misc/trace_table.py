@@ -21,19 +21,19 @@ def trace(frame, *_):
 
     # For each local value, turn the name and value into a 
     # string and find the difference in their lengths. 
-    # The difference is used to fill the empy distance between 
+    # The difference is used to fill the empty distance between 
     # the two so the columns stay aligned in the table.
     for v in frame.f_locals:
         h = str(v)
         n = str(frame.f_locals[v])
-        filler = ' ' * (abs(len(h) - len(n)))
+        spacer = ' ' * (abs(len(h) - len(n)))
         
         # Check if the header or variable value should receive 
         # the spacer.
         if len(h) > len(n):
-            n += filler
+            n += spacer
         else:
-            h += filler
+            h += spacer
         
         # Space each column out by 2 tabs.
         header += f'{h}\t\t'
@@ -45,9 +45,9 @@ def trace(frame, *_):
         f.write(next_line)
     
     # Mode r+ wasn't working so I split it up into r and w modes.
-    # file.seek(0, 0) was also making issues.
+    # file.seek(0, 0) was also giving issues.
     # Read everything out of the trace table file and overwrite 
-    # the first line (prev header) with the new header hen write 
+    # the first line (prev header) with the new header then write 
     # it all back in.
     with open('trace.txt', 'r') as f:
         content = f.readlines()
