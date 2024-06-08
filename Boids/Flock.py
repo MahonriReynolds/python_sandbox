@@ -1,6 +1,6 @@
 
 import numpy as np
-from random import uniform, uniform
+from random import uniform
 from Boid import Boid
 
 
