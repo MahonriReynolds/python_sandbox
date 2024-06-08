@@ -1,6 +1,6 @@
 
 # Add this snippet to the top of small scripts to generate 
-# a variable trace table in same folder as 'trace.txt'.
+# a variable trace table in same folder called 'trace.txt'.
 # Assumes code to be traced is in a function and will be 
 # handling variables as locals.
 
