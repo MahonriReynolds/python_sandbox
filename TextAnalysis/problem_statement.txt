@@ -1,0 +1,7 @@
+Develop a neural network from scratch using C++ and CUDA with a Python interface to analyze a document against a predefined set of both clear and ambiguous rules. 
+The project should provide a confidence percentage of likely the document meets each rule.
+
+The main goal of this project is to make it as lightweight as possible to run on minimal hardware while maintaining decent performance.
+
+For example, the model could be used to check if a student's essay meets the requirements of a one-thousand word count (clear rule), mentions at least eight out of ten keywords (clear rule), uses well developed writing skills (ambiguous rule), uses detail when explaining key points (ambiguous rule), etc.
+
