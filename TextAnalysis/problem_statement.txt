@@ -1,5 +1,5 @@
 Develop a neural network from scratch using C++ and CUDA with a Python interface to analyze a document against a predefined set of both clear and ambiguous rules. 
-The project should provide a confidence percentage of likely the document meets each rule.
+The project should provide a confidence percentage of how likely the document meets each rule.
 
 The main goal of this project is to make it as lightweight as possible to run on minimal hardware while maintaining decent performance.
 
